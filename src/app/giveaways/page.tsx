@@ -281,7 +281,7 @@ export default function GiveawaysPage() {
                   </div>
                   <p className="text-gray-300 mb-4">{event.description}</p>
                   <blockquote className="border-l-4 border-red-500 pl-4 italic text-gray-400 mb-2">
-                    "{event.testimonial}"
+                    &quot;{event.testimonial}&qout;
                   </blockquote>
                   <p className="text-sm text-gray-500">— {event.author}</p>
                 </div>
@@ -556,7 +556,7 @@ export default function GiveawaysPage() {
               <p className="text-gray-300">
                 Most of our giveaways are open to anyone in need within the communities we serve. Specific eligibility
                 requirements, if any, will be clearly stated in the giveaway announcement. If you&apos;re unsure, please
-                contact us and we'll be happy to help determine if you qualify.
+                contact us and we&apos;ll be happy to help determine if you qualify.
               </p>
             </div>
 
@@ -565,14 +565,14 @@ export default function GiveawaysPage() {
                 Do I need to bring anything to a giveaway event?
               </h3>
               <p className="text-gray-300">
-                For most giveaways, you'll need to bring your registration confirmation (email or printed) and a valid
+                For most giveaways, you&apos;ll need to bring your registration confirmation (email or printed) and a valid
                 ID. For specific giveaways like school supplies, we may ask for proof of school enrollment. All
                 requirements will be communicated during registration.
               </p>
             </div>
 
             <div className="bg-gray-800 rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-3 text-yellow-400">What if I can't attend a giveaway in person?</h3>
+              <h3 className="text-xl font-bold mb-3 text-yellow-400">What if I can&apos;t attend a giveaway in person?</h3>
               <p className="text-gray-300">
                 If you&apos;re unable to attend due to work, health issues, or transportation challenges, you can designate
                 someone to pick up items on your behalf. Please contact us in advance to make these arrangements.
