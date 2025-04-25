@@ -8,12 +8,14 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center">
-                <span className="font-bold text-white">GS</span>
+                <span className="font-bold text-white">YH</span>
               </div>
-              <span className="text-xl font-bold text-red-500">Giving Spark</span>
+              <span className="text-xl font-bold text-red-500">Youth Highway</span>
             </div>
-            <p className="text-gray-600 mb-4">Bringing joy to communities through the power of giving.</p>
-            <p className="text-gray-600 text-sm">© {new Date().getFullYear()} Giving Spark. All rights reserved.</p>
+            <p className="text-gray-600 mb-4">
+              Improving youth literacy and overall well-being through education, outreach, and advocacy.
+            </p>
+            <p className="text-gray-600 text-sm">© {new Date().getFullYear()} Youth Highway. All rights reserved.</p>
           </div>
           <div>
             <h4 className="text-lg font-bold mb-4 text-red-500">Quick Links</h4>
@@ -30,7 +32,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/giveaways" className="hover:text-red-400 transition">
-                  Giveaways
+                  Programs
                 </Link>
               </li>
               <li>
@@ -64,7 +66,7 @@ export default function Footer() {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span>123 Community Ave, Giving City</span>
+                <span>Sacramento, CA</span>
               </li>
               <li className="flex items-center gap-2">
                 <svg
@@ -81,7 +83,7 @@ export default function Footer() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span>(555) 123-4567</span>
+                <span>Contact Number</span>
               </li>
               <li className="flex items-center gap-2">
                 <svg
@@ -98,7 +100,7 @@ export default function Footer() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span>info@givingspark.org</span>
+                <span>info@youthhighway.org</span>
               </li>
             </ul>
           </div>

@@ -15,9 +15,9 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center">
-            <span className="font-bold text-white">GS</span>
+            <span className="font-bold text-white">YH</span>
           </div>
-          <span className="text-xl font-bold text-red-500">Giving Spark</span>
+          <span className="text-xl font-bold text-red-500">Youth Highway</span>
         </div>
         <nav className="hidden md:block">
           <ul className="flex gap-6">
@@ -85,7 +85,7 @@ export default function Header() {
                   className="block py-2 hover:text-red-400 transition"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Giveaways
+                  Programs
                 </Link>
               </li>
               <li>
@@ -104,3 +104,4 @@ export default function Header() {
     </header>
   )
 }
+

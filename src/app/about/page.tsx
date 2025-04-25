@@ -1,18 +1,18 @@
 import Link from "next/link"
+import { YouthHighwayData } from "@/data/data"
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
-
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              About <span className="text-red-500">Giving Spark</span>
+              About <span className="text-red-500">Youth Highway</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Learn about our mission to bring joy to communities through the power of giving.
+              Learn about our mission to improve youth literacy and overall well-being.
             </p>
           </div>
         </div>
@@ -24,21 +24,9 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
-              <p className="text-gray-300 mb-4">
-                Giving Spark began in 2015 when a group of friends decided to organize a community fireworks display for
-                families who couldn&apos;t afford their own. What started as a small neighborhood event quickly grew into
-                something much bigger.
-              </p>
-              <p className="text-gray-300 mb-4">
-                We noticed that the joy brought by these community celebrations created a spark of connection and hope.
-                Inspired by this, we expanded our mission to include other types of giveaways that meet essential needs
-                while bringing that same spark of joy.
-              </p>
-              <p className="text-gray-300">
-                Today, Giving Spark operates year-round, providing fireworks displays, food, school supplies, and
-                seasonal items to communities across the region. Our founding principle remains the same: everyone
-                deserves to experience moments of joy and celebration, regardless of their circumstances.
-              </p>
+              <p className="text-gray-300 mb-4">{YouthHighwayData.about.description}</p>
+              <p className="text-gray-300 mb-4">{YouthHighwayData.mission}</p>
+              <p className="text-gray-300">{YouthHighwayData.about.spirit}</p>
             </div>
             <div className="relative h-80 md:h-full">
               <img
@@ -55,11 +43,8 @@ export default function AboutPage() {
       <section className="py-16 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
-            <p className="text-xl text-gray-300">
-              To bring joy and essential support to communities through thoughtful giveaways that create moments of
-              celebration and connection.
-            </p>
+            <h2 className="text-3xl font-bold mb-6">Our Vision</h2>
+            <p className="text-xl text-gray-300">{YouthHighwayData.vision}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -82,7 +67,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold mb-3 text-center">Compassion</h3>
               <p className="text-gray-300 text-center">
-                We approach our work with empathy and understanding, recognizing the dignity of every person we serve.
+                We approach our work with empathy and understanding, recognizing the dignity of every child we serve.
               </p>
             </div>
 
@@ -105,7 +90,8 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold mb-3 text-center">Community</h3>
               <p className="text-gray-300 text-center">
-                We believe in the power of bringing people together and fostering a sense of belonging and connection.
+                We believe in the power of bringing people together and fostering a sense of belonging and connection
+                for youth in Sacramento.
               </p>
             </div>
 
@@ -126,10 +112,10 @@ export default function AboutPage() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-center">Joy</h3>
+              <h3 className="text-xl font-bold mb-3 text-center">Empowerment</h3>
               <p className="text-gray-300 text-center">
-                We strive to create moments of happiness and celebration, believing that joy is an essential part of
-                human experience.
+                We strive to empower youth through literacy, education, and support, believing that every child deserves
+                the opportunity to thrive.
               </p>
             </div>
           </div>
@@ -141,31 +127,13 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Our Team</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="max-w-md mx-auto">
             {[
               {
-                name: "Michael Johnson",
+                name: YouthHighwayData.about.founder,
                 role: "Founder & Executive Director",
                 image: "/confident-businessman.png",
-                bio: "Michael founded Giving Spark after organizing community fireworks displays for 10 years. His background in event planning and passion for community service drive our mission forward.",
-              },
-              {
-                name: "Sarah Williams",
-                role: "Director of Operations",
-                image: "/confident-professional.png",
-                bio: "Sarah oversees all giveaway logistics and volunteer coordination. Her expertise in nonprofit management ensures our events run smoothly and efficiently.",
-              },
-              {
-                name: "David Chen",
-                role: "Community Outreach Coordinator",
-                image: "/confident-asian-professional.png",
-                bio: "David builds relationships with community partners and identifies areas of need. His background in social work helps us connect with those who can benefit most from our programs.",
-              },
-              {
-                name: "Aisha Patel",
-                role: "Development Director",
-                image: "/confident-indian-professional.png",
-                bio: "Aisha leads our fundraising efforts and donor relations. Her creative approach to securing resources allows us to expand our impact year after year.",
+                bio: "David founded Youth Highway with a passion for improving youth literacy and creating opportunities for children in Sacramento. His dedication to community service drives our mission forward.",
               },
             ].map((member, index) => (
               <div key={index} className="bg-gray-800 rounded-lg overflow-hidden">
@@ -187,38 +155,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Impact Stats */}
+      {/* Programs Section */}
       <section className="py-16 bg-black">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our Impact</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">Our Programs</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                number: "50+",
-                label: "Community Events",
-                description: "Fireworks displays and giveaway events organized annually",
-              },
-              {
-                number: "10,000+",
-                label: "Individuals Served",
-                description: "People who have benefited from our giveaway programs",
-              },
-              {
-                number: "5,000+",
-                label: "School Supply Kits",
-                description: "Backpacks with supplies distributed to students in need",
-              },
-              {
-                number: "25+",
-                label: "Community Partners",
-                description: "Organizations working with us to maximize our impact",
-              },
-            ].map((stat, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {YouthHighwayData.about.programs.map((program, index) => (
               <div key={index} className="bg-gray-800 p-6 rounded-lg text-center">
-                <div className="text-4xl font-bold text-red-500 mb-2">{stat.number}</div>
-                <h3 className="text-xl font-bold text-yellow-400 mb-3">{stat.label}</h3>
-                <p className="text-gray-300">{stat.description}</p>
+                <div className="text-4xl font-bold text-red-500 mb-2">{program.name}</div>
+                <p className="text-gray-300">{program.description}</p>
               </div>
             ))}
           </div>
@@ -229,10 +175,7 @@ export default function AboutPage() {
       <section className="py-16 bg-gradient-to-r from-red-900/30 to-purple-900/30">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Join Our Mission</h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-            There are many ways to get involved with Giving Spark. Whether you donate, volunteer, or spread the word,
-            your support helps us bring joy to more communities.
-          </p>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">{YouthHighwayData.support.callToAction}</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/contact" className="px-8 py-3 bg-red-600 hover:bg-red-700 rounded-full font-medium transition">
               Get Involved
@@ -251,3 +194,5 @@ export default function AboutPage() {
     </div>
   )
 }
+
+

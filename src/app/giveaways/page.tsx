@@ -1,6 +1,7 @@
 import Link from "next/link"
+import { YouthHighwayData } from "@/data/data"
 
-export default function GiveawaysPage() {
+export default function ProgramsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
       {/* Hero Section */}
@@ -8,61 +9,36 @@ export default function GiveawaysPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Our <span className="text-red-500">Giveaways</span>
+              Our <span className="text-red-500">Programs</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Explore our upcoming giveaway events and learn about the various items we distribute to communities in
-              need.
+              Explore our youth-focused programs and initiatives that serve Sacramento and surrounding communities.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Categories Section */}
+      {/* Programs Section */}
       <section className="py-16 bg-gray-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">What We Give</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">What We Do</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              {
-                name: "Fireworks",
-                image: "/vibrant-night-sky.png",
-                description: "Holiday and special event fireworks displays and giveaways for community celebrations.",
-                icon: "✨",
-              },
-              {
-                name: "Food & Essentials",
-                image: "/community-care-packages.png",
-                description: "Regular distribution of food packages, hygiene products, and household necessities.",
-                icon: "🥫",
-              },
-              {
-                name: "School Supplies",
-                image: "/colorful-backpack-essentials.png",
-                description: "Back-to-school backpacks filled with supplies for students in need.",
-                icon: "📚",
-              },
-              {
-                name: "Seasonal Items",
-                image: "/cozy-winter-gifting.png",
-                description: "Seasonal giveaways including winter coats, holiday gifts, and summer recreation items.",
-                icon: "🎁",
-              },
-            ].map((item, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {YouthHighwayData.about.programs.map((program, index) => (
               <div
                 key={index}
                 className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-red-500/20 transition"
               >
                 <div className="h-48 relative">
-                  <img src={item.image || "/placeholder.svg"} alt={item.name} className="w-full h-full object-cover" />
+                  <img
+                    src={`/abstract-geometric-shapes.png?height=300&width=400&query=${program.name}`}
+                    alt={program.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="p-6">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-2xl">{item.icon}</span>
-                    <h3 className="text-xl font-bold text-yellow-400">{item.name}</h3>
-                  </div>
-                  <p className="text-gray-300">{item.description}</p>
+                  <h3 className="text-xl font-bold text-yellow-400 mb-3">{program.name}</h3>
+                  <p className="text-gray-300">{program.description}</p>
                 </div>
               </div>
             ))}
@@ -70,56 +46,55 @@ export default function GiveawaysPage() {
         </div>
       </section>
 
-      {/* Upcoming Giveaways */}
+      {/* Upcoming Events */}
       <section className="py-16 bg-black">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Upcoming Giveaways</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">Upcoming Events</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Summer Celebration",
-                date: "July 15, 2025",
-                location: "Riverside Park",
-                description: "Fireworks display and summer recreation equipment giveaway for 100 families.",
-                type: "Fireworks & Recreation",
+                title: "Annual Toy Drive",
+                date: "December 15, 2025",
+                location: "Sacramento Community Center",
+                description:
+                  "Join us for our annual toy drive, providing joy to thousands of children during the holiday season.",
+                type: "Toy Drive",
               },
               {
                 title: "Back to School Drive",
                 date: "August 20, 2025",
                 location: "Community Center",
-                description: "Backpacks filled with school supplies for 250 students in grades K-12.",
+                description: "Backpacks filled with school supplies for students in need throughout Sacramento.",
                 type: "School Supplies",
               },
               {
-                title: "Fall Food Distribution",
+                title: "Feeding the Homeless",
                 date: "September 5, 2025",
-                location: "Downtown Square",
-                description: "Distribution of food packages and fresh produce to 150 families in need.",
-                type: "Food & Essentials",
+                location: "Downtown Sacramento",
+                description: "Join us as we provide meals and essential items to those experiencing homelessness.",
+                type: "Food Distribution",
               },
               {
-                title: "Winter Warmth Drive",
+                title: "Pajamas for Foster Children",
                 date: "November 10, 2025",
                 location: "City Hall Plaza",
-                description: "Distribution of winter coats, gloves, and blankets for the upcoming cold season.",
-                type: "Seasonal Items",
+                description: "Distribution of pajamas and comfort items for foster children in our community.",
+                type: "Foster Care Support",
               },
               {
-                title: "Holiday Celebration",
-                date: "December 18, 2025",
-                location: "Central Park",
-                description:
-                  "Holiday gifts for children, food baskets for families, and a community fireworks display.",
-                type: "Multiple Items",
+                title: "Scholarship Award Ceremony",
+                date: "June 18, 2025",
+                location: "Sacramento Convention Center",
+                description: "Annual ceremony recognizing scholarship recipients and celebrating their achievements.",
+                type: "Scholarship Program",
               },
               {
-                title: "New Year's Eve Spectacular",
-                date: "December 31, 2025",
+                title: "Shoe Drive",
+                date: "October 31, 2025",
                 location: "Downtown Waterfront",
-                description:
-                  "Our biggest fireworks display of the year with hot chocolate and treats for all attendees.",
-                type: "Fireworks & Food",
+                description: "Help us collect and distribute shoes to ensure every child walks with confidence.",
+                type: "Shoe Drive",
               },
             ].map((event, index) => (
               <div key={index} className="bg-gray-800 rounded-lg p-6 shadow-lg border border-gray-700">
@@ -181,52 +156,52 @@ export default function GiveawaysPage() {
         </div>
       </section>
 
-      {/* Past Giveaways */}
+      {/* Past Events */}
       <section className="py-16 bg-gray-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Past Giveaways</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">Past Events</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                title: "Spring Food Drive",
-                date: "April 10, 2025",
-                location: "Community Center",
-                description: "Distributed food packages to 200 families in need.",
+                title: "Annual Toy Drive 2024",
+                date: "December 15, 2024",
+                location: "Sacramento Community Center",
+                description: "Distributed over 5,000 toys to children in need during the holiday season.",
                 image: "/overflowing-donation-boxes.png",
                 testimonial:
-                  "The food packages from Giving Spark helped my family through a difficult time. We're so grateful for their support.",
-                author: "Maria C., Recipient",
+                  "The joy on my children's faces when they received their gifts was priceless. Thank you Youth Highway for making our holiday special.",
+                author: "Maria C., Parent",
               },
               {
-                title: "Winter Coat Distribution",
-                date: "January 15, 2025",
-                location: "Downtown Plaza",
-                description: "Provided warm winter coats to 150 children and adults.",
-                image: "/placeholder.svg?key=bi8r4",
-                testimonial:
-                  "My children received beautiful new coats that kept them warm all winter. Thank you for your generosity!",
-                author: "James T., Parent",
-              },
-              {
-                title: "New Year's Fireworks",
-                date: "December 31, 2024",
-                location: "Riverside Park",
-                description: "Community fireworks display attended by over 1,000 people.",
-                image: "/vibrant-new-years-sky.png",
-                testimonial:
-                  "The fireworks display brought our entire neighborhood together. It was a magical way to start the new year.",
-                author: "Community Center Director",
-              },
-              {
-                title: "Back to School 2024",
-                date: "August 25, 2024",
+                title: "Back to School Drive 2024",
+                date: "August 20, 2024",
                 location: "Multiple Schools",
-                description: "Distributed 500 backpacks with school supplies to students.",
+                description: "Provided 500 backpacks with school supplies to students in need.",
                 image: "/community-backpack-drive.png",
                 testimonial:
                   "The quality of the supplies was amazing. My kids were so excited to start school with their new backpacks.",
                 author: "Sarah M., Parent",
+              },
+              {
+                title: "Feeding the Homeless",
+                date: "April 10, 2024",
+                location: "Downtown Sacramento",
+                description: "Served meals to over 200 individuals experiencing homelessness.",
+                image: "/community-care-packages.png",
+                testimonial:
+                  "Youth Highway doesn't just provide food, they provide dignity and compassion. Their volunteers make everyone feel valued.",
+                author: "Community Center Director",
+              },
+              {
+                title: "Shoe Drive 2024",
+                date: "March 15, 2024",
+                location: "Sacramento Convention Center",
+                description: "Collected and distributed over 300 pairs of shoes to children in need.",
+                image: "/colorful-backpack-essentials.png",
+                testimonial:
+                  "My son was being bullied because of his worn-out shoes. The new shoes he received gave him confidence to return to school.",
+                author: "James T., Parent",
               },
             ].map((event, index) => (
               <div key={index} className="bg-gray-800 rounded-lg overflow-hidden flex flex-col md:flex-row">
@@ -281,7 +256,7 @@ export default function GiveawaysPage() {
                   </div>
                   <p className="text-gray-300 mb-4">{event.description}</p>
                   <blockquote className="border-l-4 border-red-500 pl-4 italic text-gray-400 mb-2">
-                    &quot;{event.testimonial}&qout;
+                    "{event.testimonial}"
                   </blockquote>
                   <p className="text-sm text-gray-500">— {event.author}</p>
                 </div>
@@ -291,11 +266,11 @@ export default function GiveawaysPage() {
         </div>
       </section>
 
-      {/* How to Qualify */}
+      {/* How to Participate */}
       <section className="py-16 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center">How to Qualify</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center">How to Participate</h2>
 
             <div className="space-y-8">
               <div className="flex gap-4">
@@ -303,10 +278,10 @@ export default function GiveawaysPage() {
                   <span className="text-white font-bold text-xl">1</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Check Eligibility</h3>
+                  <h3 className="text-xl font-bold mb-2">Check Program Details</h3>
                   <p className="text-gray-300">
-                    Most of our giveaways are open to anyone in need within the communities we serve. Some specialized
-                    giveaways may have specific eligibility requirements based on age, family size, or other factors.
+                    Review our program information to find which initiatives align with your needs or interests. Each
+                    program has specific details about who can participate and how to get involved.
                   </p>
                 </div>
               </div>
@@ -316,11 +291,11 @@ export default function GiveawaysPage() {
                   <span className="text-white font-bold text-xl">2</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Register in Advance</h3>
+                  <h3 className="text-xl font-bold mb-2">Register for Events</h3>
                   <p className="text-gray-300">
-                    For most giveaways, we require advance registration to ensure we have enough items for everyone.
-                    Registration typically opens 2-4 weeks before each event. You can register by phone, email, or in
-                    person at our office.
+                    For most programs and events, we require advance registration to ensure we can properly serve
+                    everyone. Registration typically opens 2-4 weeks before each event. You can register by phone,
+                    email, or in person.
                   </p>
                 </div>
               </div>
@@ -330,10 +305,10 @@ export default function GiveawaysPage() {
                   <span className="text-white font-bold text-xl">3</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Attend the Event</h3>
+                  <h3 className="text-xl font-bold mb-2">Attend or Volunteer</h3>
                   <p className="text-gray-300">
-                    Bring your registration confirmation and any required identification to the giveaway event. We
-                    strive to make the process quick and respectful for all participants.
+                    Participate in our programs as a recipient or volunteer to help others. We welcome community members
+                    who want to contribute their time and talents to support our mission.
                   </p>
                 </div>
               </div>
@@ -346,7 +321,7 @@ export default function GiveawaysPage() {
                   <h3 className="text-xl font-bold mb-2">Special Circumstances</h3>
                   <p className="text-gray-300">
                     If you have an urgent need or special circumstances, please contact us directly. We do our best to
-                    accommodate emergency situations outside of our regular giveaway schedule.
+                    accommodate emergency situations outside of our regular program schedule.
                   </p>
                 </div>
               </div>
@@ -364,10 +339,10 @@ export default function GiveawaysPage() {
         </div>
       </section>
 
-      {/* Giveaway Process Timeline */}
+      {/* Program Process */}
       <section className="py-16 bg-gray-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our Giveaway Process</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">Our Program Process</h2>
 
           <div className="max-w-4xl mx-auto">
             <div className="relative">
@@ -380,10 +355,10 @@ export default function GiveawaysPage() {
                 <div className="relative flex flex-col md:flex-row items-center">
                   <div className="flex md:justify-end md:w-1/2 md:pr-8 order-2 md:order-1">
                     <div className="bg-gray-800 p-5 rounded-lg shadow-lg max-w-sm">
-                      <h3 className="text-xl font-bold mb-2 text-yellow-400">Planning & Preparation</h3>
+                      <h3 className="text-xl font-bold mb-2 text-yellow-400">Needs Assessment</h3>
                       <p className="text-gray-300">
-                        We identify community needs, secure funding and donations, and plan logistics for each giveaway
-                        event.
+                        We identify community needs through outreach, partnerships with schools, and direct engagement
+                        with families.
                       </p>
                     </div>
                   </div>
@@ -405,10 +380,10 @@ export default function GiveawaysPage() {
                   </div>
                   <div className="flex md:justify-start md:w-1/2 md:pl-8 order-3">
                     <div className="bg-gray-800 p-5 rounded-lg shadow-lg max-w-sm">
-                      <h3 className="text-xl font-bold mb-2 text-yellow-400">Announcement & Registration</h3>
+                      <h3 className="text-xl font-bold mb-2 text-yellow-400">Program Development</h3>
                       <p className="text-gray-300">
-                        We announce upcoming giveaways through community partners, social media, and local
-                        organizations. Registration opens 2-4 weeks before each event.
+                        We design programs that address specific needs, establish goals, and create implementation plans
+                        with our community partners.
                       </p>
                     </div>
                   </div>
@@ -418,10 +393,10 @@ export default function GiveawaysPage() {
                 <div className="relative flex flex-col md:flex-row items-center">
                   <div className="flex md:justify-end md:w-1/2 md:pr-8 order-2 md:order-1">
                     <div className="bg-gray-800 p-5 rounded-lg shadow-lg max-w-sm">
-                      <h3 className="text-xl font-bold mb-2 text-yellow-400">Preparation & Setup</h3>
+                      <h3 className="text-xl font-bold mb-2 text-yellow-400">Resource Gathering</h3>
                       <p className="text-gray-300">
-                        Our volunteers organize items, prepare the venue, and set up distribution stations to ensure a
-                        smooth event.
+                        We collect donations, secure funding, and mobilize volunteers to support each program
+                        initiative.
                       </p>
                     </div>
                   </div>
@@ -443,10 +418,10 @@ export default function GiveawaysPage() {
                   </div>
                   <div className="flex md:justify-start md:w-1/2 md:pl-8 order-3">
                     <div className="bg-gray-800 p-5 rounded-lg shadow-lg max-w-sm">
-                      <h3 className="text-xl font-bold mb-2 text-yellow-400">Distribution Day</h3>
+                      <h3 className="text-xl font-bold mb-2 text-yellow-400">Implementation</h3>
                       <p className="text-gray-300">
-                        Recipients arrive at their scheduled time, check in, and receive their items. For fireworks
-                        events, we host community displays in safe, designated areas.
+                        We execute programs through events, distributions, and ongoing initiatives that directly serve
+                        youth and families in need.
                       </p>
                     </div>
                   </div>
@@ -456,10 +431,10 @@ export default function GiveawaysPage() {
                 <div className="relative flex flex-col md:flex-row items-center">
                   <div className="flex md:justify-end md:w-1/2 md:pr-8 order-2 md:order-1">
                     <div className="bg-gray-800 p-5 rounded-lg shadow-lg max-w-sm">
-                      <h3 className="text-xl font-bold mb-2 text-yellow-400">Follow-up & Evaluation</h3>
+                      <h3 className="text-xl font-bold mb-2 text-yellow-400">Evaluation & Growth</h3>
                       <p className="text-gray-300">
-                        We collect feedback, assess impact, and identify improvements for future giveaways to better
-                        serve our communities.
+                        We assess program impact, gather feedback, and continuously improve our approaches to better
+                        serve our community.
                       </p>
                     </div>
                   </div>
@@ -479,49 +454,49 @@ export default function GiveawaysPage() {
       {/* Partners Section */}
       <section className="py-16 bg-black">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our Giveaway Partners</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">Our Partners</h2>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               {
-                name: "City Parks Department",
-                logo: "/placeholder.svg?height=100&width=200&query=city parks department logo",
-                description: "Provides venues for our fireworks displays and outdoor events.",
+                name: "Sacramento Schools",
+                logo: "/education-crest.png",
+                description: "Partners with us on educational initiatives and school supply drives.",
               },
               {
                 name: "Local Food Bank",
-                logo: "/placeholder.svg?height=100&width=200&query=food bank logo",
-                description: "Partners with us on food distribution giveaways.",
+                logo: "/hands-holding-abundance.png",
+                description: "Collaborates on food distribution programs.",
               },
               {
-                name: "Community Schools",
-                logo: "/placeholder.svg?height=100&width=200&query=school district logo",
-                description: "Helps identify students in need for our school supply giveaways.",
+                name: "Community Center",
+                logo: "/urban-green-leaf.png",
+                description: "Provides venues for our events and programs.",
               },
               {
                 name: "Regional Health Center",
-                logo: "/placeholder.svg?height=100&width=200&query=health center logo",
-                description: "Provides health and safety information at our giveaway events.",
+                logo: "/interconnected-health.png",
+                description: "Supports health and wellness aspects of our programs.",
               },
               {
                 name: "Local Businesses Association",
-                logo: "/placeholder.svg?height=100&width=200&query=business association logo",
-                description: "Contributes donations and volunteer support for giveaways.",
-              },
-              {
-                name: "Transportation Authority",
-                logo: "/placeholder.svg?height=100&width=200&query=transportation authority logo",
-                description: "Offers free transportation to and from major giveaway events.",
+                logo: "/interconnected-growth.png",
+                description: "Contributes donations and volunteer support.",
               },
               {
                 name: "Youth Development Center",
-                logo: "/placeholder.svg?height=100&width=200&query=youth center logo",
-                description: "Connects young people with our seasonal giveaway programs.",
+                logo: "/vibrant-youth-hub.png",
+                description: "Collaborates on youth empowerment initiatives.",
               },
               {
-                name: "Community Foundation",
-                logo: "/placeholder.svg?height=100&width=200&query=community foundation logo",
-                description: "Provides grant funding for our largest giveaway initiatives.",
+                name: "Sacramento Foundation",
+                logo: "/interconnected-community.png",
+                description: "Provides grant funding for our programs.",
+              },
+              {
+                name: "Foster Care Network",
+                logo: "/interconnected-hearts.png",
+                description: "Partners on programs for foster children.",
               },
             ].map((partner, index) => (
               <div key={index} className="bg-gray-800 p-4 rounded-lg flex flex-col items-center text-center">
@@ -537,7 +512,7 @@ export default function GiveawaysPage() {
           </div>
 
           <div className="mt-12 text-center">
-            <p className="text-gray-300 mb-4">Interested in becoming a giveaway partner?</p>
+            <p className="text-gray-300 mb-4">Interested in becoming a partner?</p>
             <Link href="/contact" className="px-8 py-3 bg-red-600 hover:bg-red-700 rounded-full font-medium transition">
               Partner With Us
             </Link>
@@ -552,47 +527,47 @@ export default function GiveawaysPage() {
 
           <div className="max-w-3xl mx-auto space-y-6">
             <div className="bg-gray-800 rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-3 text-yellow-400">How do I know if I qualify for a giveaway?</h3>
+              <h3 className="text-xl font-bold mb-3 text-yellow-400">How can my child benefit from your programs?</h3>
               <p className="text-gray-300">
-                Most of our giveaways are open to anyone in need within the communities we serve. Specific eligibility
-                requirements, if any, will be clearly stated in the giveaway announcement. If you&apos;re unsure, please
-                contact us and we&apos;ll be happy to help determine if you qualify.
+                Our programs are designed to support youth in various ways, from providing essential supplies to
+                offering educational opportunities. If your child needs school supplies, clothing, or other support,
+                please contact us to learn about eligibility for our current programs.
               </p>
             </div>
 
             <div className="bg-gray-800 rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-3 text-yellow-400">
-                Do I need to bring anything to a giveaway event?
-              </h3>
+              <h3 className="text-xl font-bold mb-3 text-yellow-400">How can I volunteer with Youth Highway?</h3>
               <p className="text-gray-300">
-                For most giveaways, you&apos;ll need to bring your registration confirmation (email or printed) and a valid
-                ID. For specific giveaways like school supplies, we may ask for proof of school enrollment. All
-                requirements will be communicated during registration.
+                We welcome volunteers for all our programs! Whether you can help at a single event or on a regular
+                basis, your support makes a difference. Contact us through our website or call our office to learn about
+                current volunteer opportunities.
               </p>
             </div>
 
             <div className="bg-gray-800 rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-3 text-yellow-400">What if I can&apos;t attend a giveaway in person?</h3>
+              <h3 className="text-xl font-bold mb-3 text-yellow-400">How are donations used?</h3>
               <p className="text-gray-300">
-                If you&apos;re unable to attend due to work, health issues, or transportation challenges, you can designate
-                someone to pick up items on your behalf. Please contact us in advance to make these arrangements.
+                As a registered 501(c)(3) nonprofit, all donations go directly toward our programs serving youth in
+                Sacramento. Your contributions fund toy drives, backpack distributions, meals for the homeless,
+                scholarship programs, and more.
               </p>
             </div>
 
             <div className="bg-gray-800 rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-3 text-yellow-400">Are your fireworks displays safe?</h3>
+              <h3 className="text-xl font-bold mb-3 text-yellow-400">Do you work with schools?</h3>
               <p className="text-gray-300">
-                Absolutely. Safety is our top priority. Our fireworks displays are conducted by licensed professionals
-                in accordance with all local regulations. We coordinate with fire departments and emergency services to
-                ensure a safe experience for everyone.
+                Yes! We partner with schools throughout Sacramento to identify students in need and provide appropriate
+                support. If you're an educator interested in connecting your school with our programs, please reach out
+                to discuss potential collaboration.
               </p>
             </div>
 
             <div className="bg-gray-800 rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-3 text-yellow-400">How can I help with giveaways?</h3>
+              <h3 className="text-xl font-bold mb-3 text-yellow-400">How can businesses support Youth Highway?</h3>
               <p className="text-gray-300">
-                There are many ways to help! You can donate items or funds, volunteer your time, or become a community
-                partner. Visit our Contact page to learn more about getting involved with our giveaway programs.
+                Businesses can support our mission through sponsorships, in-kind donations, employee volunteer days, or
+                hosting collection drives. We recognize our business partners and can provide tax documentation for all
+                contributions.
               </p>
             </div>
           </div>
@@ -603,10 +578,7 @@ export default function GiveawaysPage() {
       <section className="py-16 bg-gradient-to-r from-red-900/30 to-purple-900/30">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Help Us Make a Difference</h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-            Your support helps us bring joy and essential items to communities in need. Together, we can make a
-            meaningful impact.
-          </p>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">{YouthHighwayData.support.callToAction}</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/contact" className="px-8 py-3 bg-red-600 hover:bg-red-700 rounded-full font-medium transition">
               Get Involved
@@ -625,3 +597,4 @@ export default function GiveawaysPage() {
     </div>
   )
 }
+
