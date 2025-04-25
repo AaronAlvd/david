@@ -328,12 +328,6 @@ export default function Home() {
                       </svg>
                       Donate via PayPal
                     </Link>
-                    <Link
-                      href="/contact"
-                      className="px-8 py-3 bg-transparent border-2 border-white hover:bg-white/10 rounded-full font-medium transition"
-                    >
-                      Other Ways to Give
-                    </Link>
                   </div>
                 </div>
               </div>
