@@ -6,7 +6,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-b from-black to-gray-900">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               About <span className="text-red-500">Youth Highway</span>
@@ -20,7 +20,7 @@ export default function AboutPage() {
 
       {/* Our Story */}
       <section className="py-16 bg-gray-900">
-        <div className="container mx-auto px-4">
+        <div className="mx-6 px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
@@ -30,7 +30,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-80 md:h-full">
               <img
-                src="/community-celebration.png"
+                src="/youthHighway.jpeg"
                 alt="Community celebration"
                 className="rounded-lg object-cover w-full h-full"
               />
@@ -41,7 +41,7 @@ export default function AboutPage() {
 
       {/* Mission & Values */}
       <section className="py-16 bg-black">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold mb-6">Our Vision</h2>
             <p className="text-xl text-gray-300">{YouthHighwayData.vision}</p>
@@ -124,7 +124,7 @@ export default function AboutPage() {
 
       {/* Team Section */}
       <section className="py-16 bg-gray-900">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Our Team</h2>
 
           <div className="max-w-md mx-auto">
@@ -157,7 +157,7 @@ export default function AboutPage() {
 
       {/* Programs Section */}
       <section className="py-16 bg-black">
-        <div className="container mx-auto px-4">
+        <div className="mx-6 px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Our Programs</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -173,7 +173,7 @@ export default function AboutPage() {
 
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-r from-red-900/30 to-purple-900/30">
-        <div className="container mx-auto px-4 text-center">
+        <div className="mx-6 px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Join Our Mission</h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">{YouthHighwayData.support.callToAction}</p>
           <div className="flex flex-wrap gap-4 justify-center">
@@ -181,7 +181,7 @@ export default function AboutPage() {
               Get Involved
             </Link>
             <Link
-              href="https://www.paypal.com/donate"
+              href="https://www.paypal.com/donate/?business=FSJM37UGHK6PL&no_recurring=0&currency_code=USD"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-transparent border-2 border-white hover:bg-white/10 rounded-full font-medium transition"

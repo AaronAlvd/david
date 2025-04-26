@@ -6,7 +6,7 @@ export default function ProgramsPage() {
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-b from-black to-gray-900">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Our <span className="text-red-500">Programs</span>
@@ -20,7 +20,7 @@ export default function ProgramsPage() {
 
       {/* Programs Section */}
       <section className="py-16 bg-gray-900">
-        <div className="container mx-auto px-4">
+        <div className="mx-6 px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">What We Do</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -31,7 +31,7 @@ export default function ProgramsPage() {
               >
                 <div className="h-48 relative">
                   <img
-                    src={`/abstract-geometric-shapes.png?height=300&width=400&query=${program.name}`}
+                    src={`${program.image}`}
                     alt={program.name}
                     className="w-full h-full object-cover"
                   />
@@ -48,7 +48,7 @@ export default function ProgramsPage() {
 
       {/* Upcoming Events */}
       <section className="py-16 bg-black">
-        <div className="container mx-auto px-4">
+        <div className="mx-6 px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Upcoming Events</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -158,7 +158,7 @@ export default function ProgramsPage() {
 
       {/* Past Events */}
       <section className="py-16 bg-gray-900">
-        <div className="container mx-auto px-4">
+        <div className="mx-6 px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Past Events</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -268,7 +268,7 @@ export default function ProgramsPage() {
 
       {/* How to Participate */}
       <section className="py-16 bg-black">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center">How to Participate</h2>
 
@@ -341,7 +341,7 @@ export default function ProgramsPage() {
 
       {/* Program Process */}
       <section className="py-16 bg-gray-900">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Our Program Process</h2>
 
           <div className="max-w-4xl mx-auto">
@@ -453,7 +453,7 @@ export default function ProgramsPage() {
 
       {/* Partners Section */}
       <section className="py-16 bg-black">
-        <div className="container mx-auto px-4">
+        <div className="mx-6 px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Our Partners</h2>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -522,7 +522,7 @@ export default function ProgramsPage() {
 
       {/* FAQ Section */}
       <section className="py-16 bg-gray-900">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
 
           <div className="max-w-3xl mx-auto space-y-6">
@@ -576,7 +576,7 @@ export default function ProgramsPage() {
 
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-r from-red-900/30 to-purple-900/30">
-        <div className="container mx-auto px-4 text-center">
+        <div className="mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Help Us Make a Difference</h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">{YouthHighwayData.support.callToAction}</p>
           <div className="flex flex-wrap gap-4 justify-center">
@@ -584,7 +584,7 @@ export default function ProgramsPage() {
               Get Involved
             </Link>
             <Link
-              href="https://www.paypal.com/donate"
+              href="https://www.paypal.com/donate/?business=FSJM37UGHK6PL&no_recurring=0&currency_code=USD"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-transparent border-2 border-white hover:bg-white/10 rounded-full font-medium transition"

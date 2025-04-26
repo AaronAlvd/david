@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function Footer() {
   return (
     <footer className="bg-black py-12 border-t border-gray-800">
-      <div className="container mx-auto px-4">
+      <div className="mx-6 px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
@@ -13,7 +13,7 @@ export default function Footer() {
               <span className="text-xl font-bold text-red-500">Youth Highway</span>
             </div>
             <p className="text-gray-600 mb-4">
-              Improving youth literacy and overall well-being through education, outreach, and advocacy.
+            To create a world where every young person can thrive with literacy, support, and a community that believes in them.
             </p>
             <p className="text-gray-600 text-sm">© {new Date().getFullYear()} Youth Highway. All rights reserved.</p>
           </div>
@@ -100,7 +100,7 @@ export default function Footer() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span>info@youthhighway.org</span>
+                <span>carmon_david@yahoo.com</span>
               </li>
             </ul>
           </div>

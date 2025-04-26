@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-10 bg-black backdrop-blur-sm">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="mx-6 px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center">
             <span className="font-bold text-white">YH</span>

@@ -12,6 +12,17 @@ export const metadata: Metadata = {
   title: "Fireworks For All - Nonprofit Fireworks Giveaways",
   description:
     "A nonprofit organization dedicated to giving away fireworks and bringing joy to communities through spectacular displays.",
+  openGraph: {
+    images: [
+      {
+        url: "/icon.png",
+        alt: "Fireworks For All - Nonprofit Fireworks Giveaways",
+      },
+    ],
+  },
+  icons: {
+    icon: "/icon.png",
+  },
 }
 
 export default function RootLayout({

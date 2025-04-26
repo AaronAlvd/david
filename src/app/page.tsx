@@ -10,7 +10,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent z-10"></div>
           <img src="/vibrant-night-sky.png" alt="Youth Highway" className="w-full h-full object-cover opacity-50" />
         </div>
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="mx-auto px-4 relative z-10">
           <div className="max-w-2xl">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">{YouthHighwayData.welcome}</h1>
             <p className="text-xl text-gray-300 mb-8">{YouthHighwayData.mission}</p>
@@ -32,9 +32,75 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured Video Section */}
+      <section className="py-16 bg-black">
+        <div className="mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 text-center">Our Story</h2>
+
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="md:w-1/2">
+              <p className="text-gray-300 mb-6">
+                Watch our founder, David Carmon, explain the mission and impact of Youth Highway in the Sacramento
+                community. Learn how we're making a difference in the lives of young people through our various programs
+                and initiatives.
+              </p>
+              <p className="text-gray-300 mb-6">
+                Youth Highway is committed to improving youth literacy and overall well-being through education,
+                outreach, and advocacy. Our programs touch thousands of lives each year, providing essential support and
+                creating opportunities for growth.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href="/about"
+                  className="px-8 py-3 bg-red-600 hover:bg-red-700 rounded-full font-medium transition"
+                >
+                  Learn More About Us
+                </Link>
+              </div>
+            </div>
+
+            <div className="md:w-1/2 flex justify-center">
+              <div className="relative w-full max-w-[350px] aspect-[9/16] bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                {/* Video placeholder - replace src with your actual video */}
+                <video className="w-full h-full object-cover" controls poster="/video-poster.png" preload="metadata">
+                  <source src="/video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+
+                {/* Optional play button overlay */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 hover:opacity-100 transition-opacity">
+                  <div className="w-20 h-20 rounded-full bg-red-600/80 flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-10 w-10 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section className="py-16 bg-gray-900">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="md:w-1/2">
               <h2 className="text-3xl font-bold mb-6">About Youth Highway</h2>
@@ -58,7 +124,7 @@ export default function Home() {
             </div>
             <div className="md:w-1/2">
               <img
-                src="/community-celebration.png"
+                src="/youthHighway.jpeg"
                 alt="Community celebration"
                 className="rounded-lg shadow-lg w-full"
               />
@@ -69,7 +135,7 @@ export default function Home() {
 
       {/* What We Do Section */}
       <section className="py-16 bg-black">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Our Programs</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -80,7 +146,7 @@ export default function Home() {
               >
                 <div className="h-48 relative">
                   <img
-                    src={`/abstract-geometric-shapes.png?height=300&width=400&query=${program.name}`}
+                    src={`${program.image}`}
                     alt={program.name}
                     className="w-full h-full object-cover"
                   />
@@ -106,7 +172,7 @@ export default function Home() {
 
       {/* Upcoming Events */}
       <section className="py-16 bg-gray-900">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Upcoming Events</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -218,7 +284,7 @@ export default function Home() {
 
       {/* Impact Stats */}
       <section className="py-16 bg-black">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Our Impact</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -240,7 +306,7 @@ export default function Home() {
 
       {/* Donation Section */}
       <section className="py-16 bg-gradient-to-r from-red-900/30 to-purple-900/30">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-gray-800/80 rounded-lg p-8 shadow-lg border border-red-500/20">
               <div className="flex flex-col md:flex-row items-center gap-8">
@@ -267,7 +333,7 @@ export default function Home() {
                   <p className="text-gray-300 mb-6">{YouthHighwayData.support.description}</p>
                   <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                     <Link
-                      href="https://www.paypal.com/donate"
+                      href="https://www.paypal.com/donate/?business=FSJM37UGHK6PL&no_recurring=0&currency_code=USD"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-8 py-3 bg-red-600 hover:bg-red-700 rounded-full font-medium transition flex items-center gap-2"
