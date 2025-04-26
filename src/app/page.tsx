@@ -42,7 +42,7 @@ export default function Home() {
             <div className="md:w-1/2">
               <p className="text-gray-300 mb-6">
                 Watch our founder, David Carmon, explain the mission and impact of Youth Highway in the Sacramento
-                community. Learn how we're making a difference in the lives of young people through our various programs
+                community. Learn how we&apos;re making a difference in the lives of young people through our various programs
                 and initiatives.
               </p>
               <p className="text-gray-300 mb-6">

@@ -21,9 +21,9 @@ export default function PaypalQRSection() {
               <div className="md:w-1/2">
                 <h3 className="text-xl font-bold mb-4 text-yellow-400">Scan to Donate</h3>
                 <div className="space-y-4 text-gray-300">
-                  <p>Support Youth Highway instantly by scanning this QR code with your phone's camera.</p>
+                  <p>Support Youth Highway instantly by scanning this QR code with your phone&apos;s camera.</p>
                   <ol className="list-decimal pl-5 space-y-2">
-                    <li>Open your phone's camera app</li>
+                    <li>Open your phone&apos;s camera app</li>
                     <li>Point it at the QR code</li>
                     <li>Tap the notification that appears</li>
                     <li>Complete your donation through PayPal</li>
