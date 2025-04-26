@@ -3,6 +3,16 @@ import PaypalQRSection from "@/components/paypal-qr-section"
 import { YouthHighwayData } from "@/data/data"
 
 export default function Home() {
+  const events = [
+    {
+      title: "Light Up the Night: Fireworks Giveaway",
+      date: "June 28th - July 4th",
+      location: "4500 Manzanita Ave, Carmichael, CA 95608",
+      description:
+        "Celebrate Independence Day with us! Come by for free fireworks giveaways, family fun, and a festive atmosphere all week long.",
+      image: "/tnt.jpeg",
+    },
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
       {/* Hero Section */}
@@ -173,36 +183,22 @@ export default function Home() {
 
       {/* Upcoming Events */}
       <section className="py-16 bg-gray-900">
-        <div className="mx-auto px-4">
+        <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Upcoming Events</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Annual Toy Drive",
-                date: "December 15, 2025",
-                location: "Sacramento Community Center",
-                description:
-                  "Join us for our annual toy drive, providing joy to thousands of children during the holiday season.",
-                image: "/placeholder.svg?key=myyg0",
-              },
-              {
-                title: "Back to School Drive",
-                date: "August 20, 2025",
-                location: "Community Center",
-                description: "Backpacks filled with school supplies for students in need throughout Sacramento.",
-                image: "/colorful-backpack-essentials.png",
-              },
-              {
-                title: "Feeding the Homeless",
-                date: "September 5, 2025",
-                location: "Downtown Sacramento",
-                description: "Join us as we provide meals and essential items to those experiencing homelessness.",
-                image: "/community-care-packages.png",
-              },
-            ].map((event, index) => (
+          <div
+            className={`grid gap-8 mx-auto ${
+              // Dynamic grid layout based on number of events
+              events.length === 1
+                ? "grid-cols-1 max-w-2xl"
+                : events.length === 2
+                  ? "grid-cols-1 md:grid-cols-2 max-w-4xl"
+                  : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+            }`}
+          >
+            {events.map((event, index) => (
               <div key={index} className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                <div className="h-48 relative">
+                <div className={`relative ${events.length <= 2 ? "h-64" : "h-48"}`}>
                   <img
                     src={event.image || "/placeholder.svg"}
                     alt={event.title}
@@ -213,7 +209,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-yellow-400">{event.title}</h3>
+                  <h3 className={`font-bold mb-2 text-yellow-400 ${events.length <= 2 ? "text-2xl" : "text-xl"}`}>
+                    {event.title}
+                  </h3>
                   <div className="flex items-center gap-2 mb-2 text-gray-300">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -254,7 +252,9 @@ export default function Home() {
                     </svg>
                     <span>{event.location}</span>
                   </div>
-                  <p className="text-gray-300 mb-4">{event.description}</p>
+                  <p className={`text-gray-300 mb-4 ${events.length <= 2 ? "text-lg" : "text-base"}`}>
+                    {event.description}
+                  </p>
                   <Link href="/giveaways" className="text-red-400 hover:text-red-300 font-medium flex items-center">
                     Learn more
                     <svg
