@@ -14,7 +14,7 @@ export const YouthHighwayData = {
       {
         name: "Backpack & School Supply Drives",
         description: "Equipping students for success",
-        image: "/colorful-backpack-essentials.png",
+        image: "/backpacks.jpg",
       },
       {
         name: "Feeding the Homeless",

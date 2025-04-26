@@ -12,7 +12,7 @@ export default function ProgramsPage() {
     } else if (program.name === "Shoe Drives") {
       image = "/shoe-drive-donations.png"
     } else if (program.name === "Backpack & School Supply Drives") {
-      image = "/colorful-backpack-essentials.png"
+      image = "/backpacks.jpg"
     } else if (program.name === "Feeding the Homeless") {
       image = "/community-care-packages.png"
     } else if (program.name === "Pajamas for Foster Children") {
@@ -113,7 +113,7 @@ export default function ProgramsPage() {
                 key={index}
                 className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-red-500/20 transition"
               >
-                <div className="h-48 relative">
+                <div className="h-68 relative">
                   <img
                     src={program.image || "/placeholder.svg"}
                     alt={program.name}
