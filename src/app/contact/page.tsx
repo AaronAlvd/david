@@ -101,11 +101,11 @@ export default function ContactPage() {
               </div>
               <h3 className="text-xl font-bold mb-3">Email Us</h3>
               <p className="text-gray-300">
-                General Inquiries: carmon_david@yahoo.com
+                General Inquiries: youthhighway@gmail.com
                 <br />
-                Donations: carmon_david@yahoo.com
+                Donations: youthhighway@gmail.com
                 <br />
-                Volunteer: carmon_david@yahoo.com
+                Volunteer: youthhighway@gmail.com
               </p>
             </div>
           </div>
