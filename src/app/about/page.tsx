@@ -132,7 +132,7 @@ export default function AboutPage() {
               {
                 name: YouthHighwayData.about.founder,
                 role: "Founder & Executive Director",
-                image: "/confident-businessman.png",
+                image: "/david.jprg",
                 bio: "David founded Youth Highway with a passion for improving youth literacy and creating opportunities for children in Sacramento. His dedication to community service drives our mission forward.",
               },
             ].map((member, index) => (
