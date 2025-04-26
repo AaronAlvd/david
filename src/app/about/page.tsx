@@ -141,7 +141,7 @@ export default function AboutPage() {
                   <img
                     src={member.image || "/placeholder.svg"}
                     alt={member.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-[0%_0%]"
                   />
                 </div>
                 <div className="p-6">
