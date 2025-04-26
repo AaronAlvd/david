@@ -281,7 +281,7 @@ export default function ProgramsPage() {
                   </div>
                   <p className="text-gray-300 mb-4">{event.description}</p>
                   <blockquote className="border-l-4 border-red-500 pl-4 italic text-gray-400 mb-2">
-                    "{event.testimonial}"
+                    {'"' + event.testimonial + '"'}
                   </blockquote>
                   <p className="text-sm text-gray-500">— {event.author}</p>
                 </div>
@@ -578,7 +578,7 @@ export default function ProgramsPage() {
               <h3 className="text-xl font-bold mb-3 text-yellow-400">Do you work with schools?</h3>
               <p className="text-gray-300">
                 Yes! We partner with schools throughout Sacramento to identify students in need and provide appropriate
-                support. If you're an educator interested in connecting your school with our programs, please reach out
+                support. If you&apos;re an educator interested in connecting your school with our programs, please reach out
                 to discuss potential collaboration.
               </p>
             </div>
